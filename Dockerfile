@@ -52,3 +52,7 @@ RUN wget https://services.gradle.org/distributions/gradle-2.2.1-bin.zip && \
     unzip gradle*zip && \
     rm gradle*zip
 RUN ln -s /gradle-2.2.1/bin/gradle /usr/bin/gradle
+
+#Fig
+RUN curl -L https://github.com/docker/fig/releases/download/1.0.1/fig-`uname -s`-`uname -m` > /usr/local/bin/fig; chmod +x /usr/local/bin/fig
+
