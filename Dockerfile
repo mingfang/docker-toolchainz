@@ -16,7 +16,7 @@ RUN add-apt-repository ppa:webupd8team/java -y && \
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 #Maven
-RUN curl http://apache.mirrors.lucidnetworks.net/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz | tar zx
+RUN curl http://apache.mirrors.lucidnetworks.net/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz | tar zx
 RUN ln -s /apache-maven-3.2.3/bin/mvn /usr/bin/mvn
 
 #Sbt
@@ -24,7 +24,7 @@ RUN curl -L https://dl.bintray.com/sbt/native-packages/sbt/0.13.7/sbt-0.13.7.tgz
 RUN ln -s /sbt/bin/sbt /usr/bin/sbt
 
 #Node
-RUN curl http://nodejs.org/dist/v0.10.33/node-v0.10.33-linux-x64.tar.gz | tar xz
+RUN curl http://nodejs.org/dist/v0.10.35/node-v0.10.35-linux-x64.tar.gz | tar xz
 RUN mv node* node && \
     ln -s /node/bin/node /usr/local/bin/node && \
     ln -s /node/bin/npm /usr/local/bin/npm
