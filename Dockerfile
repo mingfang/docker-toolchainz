@@ -17,7 +17,8 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 #Maven
 RUN curl http://apache.mirrors.lucidnetworks.net/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz | tar zx
-RUN ln -s /apache-maven-3.2.3/bin/mvn /usr/bin/mvn
+RUN mv apache-maven* maven && \
+    ln -s /maven/bin/mvn /usr/bin/mvn
 
 #Sbt
 RUN curl -L https://dl.bintray.com/sbt/native-packages/sbt/0.13.7/sbt-0.13.7.tgz | tar zx
