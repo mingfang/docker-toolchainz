@@ -16,7 +16,7 @@ RUN add-apt-repository ppa:webupd8team/java -y && \
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 #Maven
-RUN curl http://apache.mirrors.lucidnetworks.net/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz | tar zx
+RUN curl http://apache.osuosl.org/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz | tar zx
 RUN mv apache-maven* maven && \
     ln -s /maven/bin/mvn /usr/bin/mvn
 
