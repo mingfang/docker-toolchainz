@@ -60,3 +60,8 @@ RUN curl -L https://github.com/docker/fig/releases/download/1.0.1/fig-`uname -s`
 #HTTPie
 RUN apt-get install -y python-pip
 RUN pip install --upgrade httpie
+
+#jq
+RUN wget -P /usr/bin http://stedolan.github.io/jq/download/linux64/jq && \
+    chmod +x /usr/bin/jq
+

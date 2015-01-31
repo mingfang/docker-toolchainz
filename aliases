@@ -5,3 +5,4 @@ alias activator='docker run -p 8888:8888 -v $PWD:/docker -w /docker -v $HOME/.ac
 alias sbt='docker run -v $PWD:/docker -w /docker -v $HOME/.ivy2:/root/.ivy2  -v $HOME/.sbt:/root/.sbt --rm -it toolchainz sbt'
 alias gradle='docker run -v $PWD:/docker -w /docker -v $HOME/.gradle/caches:/root/.gradle/caches -v $HOME/.m2:/root/.m2 --rm -it toolchainz gradle'
 alias http='docker run -v $PWD:/docker -w /docker --rm -it toolchainz http'
+alias jq='docker run -v $PWD:/docker -w /docker --rm -it toolchainz jq'
