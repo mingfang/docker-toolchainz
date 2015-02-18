@@ -25,7 +25,7 @@ RUN curl -L https://dl.bintray.com/sbt/native-packages/sbt/0.13.7/sbt-0.13.7.tgz
 RUN ln -s /sbt/bin/sbt /usr/bin/sbt
 
 #Node
-RUN curl http://nodejs.org/dist/v0.10.35/node-v0.10.35-linux-x64.tar.gz | tar xz
+RUN curl http://nodejs.org/dist/v0.12.0/node-v0.12.0-linux-x64.tar.gz | tar xz
 RUN mv node* node && \
     ln -s /node/bin/node /usr/local/bin/node && \
     ln -s /node/bin/npm /usr/local/bin/npm
@@ -65,3 +65,5 @@ RUN pip install --upgrade httpie
 RUN wget -P /usr/bin http://stedolan.github.io/jq/download/linux64/jq && \
     chmod +x /usr/bin/jq
 
+#Browserify
+RUN npm install -g browserify
