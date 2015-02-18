@@ -6,3 +6,5 @@ alias sbt='docker run -v $PWD:/docker -w /docker -v $HOME/.ivy2:/root/.ivy2  -v 
 alias gradle='docker run -v $PWD:/docker -w /docker -v $HOME/.gradle/caches:/root/.gradle/caches -v $HOME/.m2:/root/.m2 --rm -it toolchainz gradle'
 alias http='docker run -v $PWD:/docker -w /docker --rm -it toolchainz http'
 alias jq='docker run -v $PWD:/docker -w /docker --rm -it toolchainz jq'
+alias browserify='docker run -v `pwd`:/docker -w /docker --rm -it toolchainz browserify'
+alias npm='docker run -v `pwd`:/docker -w /docker --rm -it toolchainz npm'
